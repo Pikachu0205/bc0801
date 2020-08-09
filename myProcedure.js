@@ -74,10 +74,11 @@ function feedbackTransaction(){
 			
 		}).then(function(res){
 			console.log(res.data);
+			//console.log(res.config.data);
 			feedbackVote.length = 0;
 			//myMain.newHeight(0);
 			})
-		.catch(function(err){console.log(err);});
+		.catch(function(err){console.log(err.data);});
 	
 	//}
 	

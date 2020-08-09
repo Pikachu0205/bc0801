@@ -55,7 +55,7 @@ function getTransaction(){
 */
 
 
-function feedbackTransaction(){
+async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		

@@ -59,7 +59,7 @@ function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		
-		axios({
+		await axios({
 			method: 'post',
 			//url: 'http://' + awsUrlList[ID] + ':3000/consensus',
 			url: 'http://' + awsUrl + ':3000/consensus',

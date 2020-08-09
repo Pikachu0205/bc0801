@@ -59,7 +59,7 @@ async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		
-		console.log(transaction123.transaction);
+		console.log("transaction123" + transaction123);
 		
 		await axios({
 			method: 'post',

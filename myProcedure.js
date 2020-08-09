@@ -59,6 +59,8 @@ async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		
+		console.log(transaction123.transaction);
+		
 		await axios({
 			method: 'post',
 			//url: 'http://' + awsUrlList[ID] + ':3000/consensus',

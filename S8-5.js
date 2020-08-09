@@ -12,7 +12,7 @@ myDeliver = require("./myDeliver.js");
 
 
 
-app.get('/Height',upload.array(), function(req, res) {
+app.post('/Height',upload.array(), function(req, res) {
 	
 	transaction123 = req.body.transaction;
 	//if(req.body.height == height + 1)

@@ -59,7 +59,7 @@ async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		
-		console.log("transaction123" + transaction123);
+		console.log("transaction123 : " + transaction123);
 		
 		await axios({
 			method: 'post',
@@ -69,7 +69,7 @@ async function feedbackTransaction(){
 			data: {
 				height : height,
 				round : round,
-				transaction : transaction123.transaction,
+				transaction : transaction123,
 				blockHash : commitBlock.blockHash.split(),
 				vote : feedbackVote
 			}

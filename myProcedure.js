@@ -73,7 +73,7 @@ function feedbackTransaction(){
 			}
 			
 		}).then(function(res){
-			console.log(res.config);
+			console.log(res.data);
 			feedbackVote.length = 0;
 			//myMain.newHeight(0);
 			})

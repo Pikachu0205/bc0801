@@ -1,9 +1,9 @@
-http://localhost:1000
-http://localhost:2000
-http://localhost:3000
-http://localhost:4000
-http://localhost:5000
-http://localhost:6000
+http://54.209.224.158:1050
+http://54.224.45.72:1050
+http://54.164.99.38:1050
+http://54.237.56.147:1050
+http://52.201.212.99:1050
+http://54.145.83.62:1050
 http://localhost:7000
 http://localhost:8000
 http://localhost:9000

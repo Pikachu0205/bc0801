@@ -14,7 +14,7 @@ myDeliver = require("./myDeliver.js");
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	transaction123 = req.body.transaction.slice(0, 91);
+	transaction123 = req.body.transaction.slice(0, 5);
 	//if(req.body.height == height + 1)
 		myMain.newHeight(0);
 	

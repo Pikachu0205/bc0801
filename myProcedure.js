@@ -59,7 +59,8 @@ async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 		
-		console.log("transaction123 : " + transaction123);
+		//console.log("transaction123 : " + transaction123);
+		console.log("feedback");
 		
 		for(var i = 0; i < awsUrlList.length; i++){
 			await axios({
@@ -80,7 +81,7 @@ async function feedbackTransaction(){
 				//console.log(res.config.data);
 				feedbackVote.length = 0;
 				//myMain.newHeight(0);
-				})
+			})
 			.catch(function(err){console.log(err.data);});
 		}
 		

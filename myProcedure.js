@@ -89,6 +89,7 @@ async function feedbackTransaction(){
 	//}
 	myMain.toStop();
 	transaction123.length = 0;
+	transactionReceiver =0;
 }
 
 

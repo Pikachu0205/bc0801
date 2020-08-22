@@ -10,6 +10,8 @@ myMain = require("./myMain.js");
 myProcedure = require("./myProcedure.js");
 myDeliver = require("./myDeliver.js");
 
+transactionReceiver =0
+
 
 
 app.post('/Height',upload.array(), function(req, res) {
@@ -27,7 +29,10 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	//transaction123 = req.body.transaction;
 	//if(req.body.height == height + 1)
+	if(transactionReceiver == 0)
 		myMain.newHeight(0);
+		transactionReceiver = 1;
+	}
 	//height = req.body.blockHeight;
 	
 	//console.log(transaction123);

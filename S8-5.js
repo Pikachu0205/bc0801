@@ -14,7 +14,7 @@ myDeliver = require("./myDeliver.js");
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	for(int i = 0; i<req.body.receiverAddress.length; i++)
+	for(var i = 0; i<req.body.receiverAddress.length; i++)
 		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
 			transaction123.push(req.body.transaction[i]);
 		

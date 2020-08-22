@@ -30,7 +30,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		myMain.newHeight(0);
 	//height = req.body.blockHeight;
 	
-	console.log(transaction123);
+	//console.log(transaction123);
 	
 	res.send(" abc ");
 });

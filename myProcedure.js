@@ -76,6 +76,11 @@ async function feedbackTransaction(){
 					vote : feedbackVote
 				}
 				
+				myMain.toStop();
+				transaction123.length = 0;
+				receiverAddress123.length = 0;
+				transactionReceiver =0;
+				
 			}).then(function(res){
 				console.log(res.data);
 				//console.log(res.config.data);
@@ -87,10 +92,6 @@ async function feedbackTransaction(){
 		
 	
 	//}
-	myMain.toStop();
-	transaction123.length = 0;
-	receiverAddress123.length = 0;
-	transactionReceiver =0;
 }
 
 

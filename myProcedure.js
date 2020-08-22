@@ -1,6 +1,6 @@
 lastLockset = [], thisLockset = [];
 blockBody=null, lastRoundBlock=null, lastRoundVote={};
-isVoteLock = 0, synH = 0, transaction123 = [];
+isVoteLock = 0, synH = 0, transaction123 = [], receiverAddress123 = [];
 size = [8, 4, 2, 1, 0.5, 0.25, 0.125, 0.0625];
 require("./S8-5.js");
 require("./setNode.js");
@@ -89,6 +89,7 @@ async function feedbackTransaction(){
 	//}
 	myMain.toStop();
 	transaction123.length = 0;
+	receiverAddress123.length = 0;
 	transactionReceiver =0;
 }
 

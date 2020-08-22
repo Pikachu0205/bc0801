@@ -18,13 +18,18 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	//console.log(req.body);
 	//console.log(typeof(req.body.receiverAddress));
-	console.log(req.body.receiverAddress[1]);
-	console.log(req.body.transaction[1]);
+	//console.log(req.body.receiverAddress[1]);
+	//console.log(req.body.transaction[1]);
 	
-	//for(var i = 0; i < req.body.receiverAddress.length; i++){
-		//if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
-			//transaction123.push(req.body.transaction[i]);
-	//}
+	for(var i = 0; i < req.body.receiverAddress.length; i++){
+		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
+			transaction123.push(req.body.transaction[i]);
+			receiverAddress123.push(receiverAddress[i]);
+		}
+	}
+	
+	console.log("transaction123 : " + transaction123);
+	console.log("receiverAddress123 : " + receiverAddress123);
 	
 	lastBlockHash = req.body.parentHash;
 	height = req.body.height;

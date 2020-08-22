@@ -29,7 +29,7 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	//transaction123 = req.body.transaction;
 	//if(req.body.height == height + 1)
-	if(transactionReceiver == 0)
+	if(transactionReceiver == 0){
 		myMain.newHeight(0);
 		transactionReceiver = 1;
 	}

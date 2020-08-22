@@ -60,13 +60,13 @@ async function feedbackTransaction(){
 	//for(i=0; i < member; i++){
 		
 		//console.log("transaction123 : " + transaction123);
-		console.log("feedback");
+		console.log("===== feedback =====");
 		
-		for(var i = 0; i < awsUrlList.length; i++){
+		//for(var i = 0; i < awsUrlList.length; i++){
 			await axios({
 				method: 'post',
-				url: 'http://' + awsUrlList[i] + ':3000/consensus',
-				//url: 'http://' + awsUrl + ':3000/consensus',
+				//url: 'http://' + awsUrlList[i] + ':3000/consensus',
+				url: 'http://' + awsUrl + ':3000/consensus',
 				
 				data: {
 					height : height,
@@ -83,7 +83,7 @@ async function feedbackTransaction(){
 				//myMain.newHeight(0);
 			})
 			.catch(function(err){console.log(err.data);});
-		}
+		//}
 		
 	
 	//}

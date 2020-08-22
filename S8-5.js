@@ -39,6 +39,7 @@ app.post('/Block', function(req, res) {
 	if(myMain.customVerify(req.body)  &&  height > 0){
 		//myMain.display(req.body);
 			
+		//if(receiveBlock == null && req.body.height == height  &&  req.body.round == round)
 		if(receiveBlock == null && req.body.height == height  &&  req.body.round == round)
 			myMain.getBlock(req);
 		

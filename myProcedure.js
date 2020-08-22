@@ -65,8 +65,8 @@ async function feedbackTransaction(){
 		for(var i = 0; i < awsUrlList.length; i++){
 			await axios({
 				method: 'post',
-				//url: 'http://' + awsUrlList[i] + ':3000/consensus',
-				url: 'http://' + awsUrl + ':3000/consensus',
+				url: 'http://' + awsUrlList[i] + ':3000/consensus',
+				//url: 'http://' + awsUrl + ':3000/consensus',
 				
 				data: {
 					height : height,

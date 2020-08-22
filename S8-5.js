@@ -20,10 +20,11 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress);
 	
-	for(var i = 0; i < req.body.receiverAddress.length; i++)
+	for(var i = 0; i < req.body.receiverAddress.length; i++){
 		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
 			transaction123.push(req.body.transaction[i]);
-		
+	}
+	
 	lastBlockHash = req.body.parentHash;
 	height = req.body.height;
 	

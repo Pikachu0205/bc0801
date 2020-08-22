@@ -15,7 +15,8 @@ transactionReceiver = 0;
 
 
 app.post('/Height',upload.array(), function(req, res) {
-	
+	transaction123.length = 0;
+	receiverAddress123.length = 0;
 	//console.log(req.body);
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress[1]);

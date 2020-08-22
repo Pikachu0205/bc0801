@@ -82,8 +82,6 @@ async function feedbackTransaction(){
 				//console.log(res.config.data);
 				myMain.toStop();
 				
-				transaction123.length = 0;
-				receiverAddress123.length = 0;
 				
 				transactionReceiver =0;
 				

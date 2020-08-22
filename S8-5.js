@@ -14,7 +14,13 @@ myDeliver = require("./myDeliver.js");
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	transaction123 = req.body.transaction.slice(0, 90);
+	for(int i = 0; i<req.body.receiverAddress.length; i++)
+		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
+			transaction123.push(req.body.transaction[i]);
+		
+	lastBlockHash = req.body.parentHash;
+	height = req.body.height;
+	
 	//transaction123 = req.body.transaction;
 	//if(req.body.height == height + 1)
 		myMain.newHeight(0);

@@ -61,26 +61,29 @@ async function feedbackTransaction(){
 		
 		console.log("transaction123 : " + transaction123);
 		
-		await axios({
-			method: 'post',
-			//url: 'http://' + awsUrlList[ID] + ':3000/consensus',
-			url: 'http://' + awsUrl + ':3000/consensus',
-			
-			data: {
-				height : height,
-				round : round,
-				transaction : transaction123,
-				blockHash : commitBlock.blockHash.split(),
-				vote : feedbackVote
-			}
-			
-		}).then(function(res){
-			console.log(res.data);
-			//console.log(res.config.data);
-			feedbackVote.length = 0;
-			//myMain.newHeight(0);
-			})
-		.catch(function(err){console.log(err.data);});
+		for(int i = 0; i<req.body.awsUrlList.length; i++){
+			await axios({
+				method: 'post',
+				url: 'http://' + awsUrlList[i] + ':3000/consensus',
+				//url: 'http://' + awsUrl + ':3000/consensus',
+				
+				data: {
+					height : height,
+					round : round,
+					transaction : transaction123,
+					blockHash : commitBlock.blockHash.split(),
+					vote : feedbackVote
+				}
+				
+			}).then(function(res){
+				console.log(res.data);
+				//console.log(res.config.data);
+				feedbackVote.length = 0;
+				//myMain.newHeight(0);
+				})
+			.catch(function(err){console.log(err.data);});
+		}
+		
 	
 	//}
 	

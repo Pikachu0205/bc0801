@@ -26,6 +26,8 @@ app.post('/Height',upload.array(), function(req, res) {
 		transactionReceiver = 1;
 		transaction123.length = 0;
 		receiverAddress123.length = 0;
+		console.log("transaction123 : " + transaction123);
+		console.log("receiverAddress123 : " + receiverAddress123);
 		
 		
 		for(var i = 0; i < req.body.receiverAddress.length; i++){

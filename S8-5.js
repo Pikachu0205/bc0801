@@ -20,25 +20,27 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress[1]);
 	//console.log(req.body.transaction[1]);
-	
-	for(var i = 0; i < req.body.receiverAddress.length; i++){
-		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
-			transaction123.push(req.body.transaction[i]);
-			receiverAddress123.push(req.body.receiverAddress[i]);
-		}
-	}
-	
-	console.log("transaction123 : " + transaction123);
-	console.log("receiverAddress123 : " + receiverAddress123);
-	
-	lastBlockHash = req.body.parentHash;
-	height = req.body.height;
-	
-	transaction123 = req.body.transaction;
-	//if(req.body.height == height + 1)
 	if(transactionReceiver == 0){
-		myMain.newHeight(0);
 		transactionReceiver = 1;
+		
+		for(var i = 0; i < req.body.receiverAddress.length; i++){
+			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
+				transaction123.push(req.body.transaction[i]);
+				receiverAddress123.push(req.body.receiverAddress[i]);
+			}
+		}
+		
+		console.log("transaction123 : " + transaction123);
+		console.log("receiverAddress123 : " + receiverAddress123);
+		
+		lastBlockHash = req.body.parentHash;
+		height = req.body.height;
+		
+		transaction123 = req.body.transaction;
+		//if(req.body.height == height + 1)
+		//if(transactionReceiver == 0){
+		myMain.newHeight(0);
+		//transactionReceiver = 1;
 	}
 	//height = req.body.blockHeight;
 	

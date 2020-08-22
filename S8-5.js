@@ -13,8 +13,12 @@ myDeliver = require("./myDeliver.js");
 
 
 app.post('/Height',upload.array(), function(req, res) {
+	transaction123.length = 0;
 	
-	for(var i = 0; i<req.body.receiverAddress.length; i++)
+	console.log(typeof(req.body.receiverAddress));
+	console.log(req.body.receiverAddress);
+	
+	for(var i = 0; i < req.body.receiverAddress.length; i++)
 		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
 			transaction123.push(req.body.transaction[i]);
 		

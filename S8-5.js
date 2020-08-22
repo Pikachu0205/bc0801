@@ -36,7 +36,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		lastBlockHash = req.body.parentHash;
 		height = req.body.height;
 		
-		transaction123 = req.body.transaction;
+		//transaction123 = req.body.transaction;
 		//if(req.body.height == height + 1)
 		//if(transactionReceiver == 0){
 		myMain.newHeight(0);

@@ -14,7 +14,7 @@ myDeliver = require("./myDeliver.js");
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	console.log(req.body);
+	//console.log(req.body);
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress);
 	

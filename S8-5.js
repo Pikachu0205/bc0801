@@ -25,7 +25,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		
 		for(var i = 0; i < req.body.receiverAddress.length; i++){
 			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
-				transaction123.push(req.body.transaction[i]);
+				transaction123.push(String(req.body.transaction[i]));
 				receiverAddress123.push(req.body.receiverAddress[i]);
 			}
 		}

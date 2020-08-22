@@ -61,7 +61,7 @@ async function feedbackTransaction(){
 		
 		console.log("transaction123 : " + transaction123);
 		
-		for(int i = 0; i<req.body.awsUrlList.length; i++){
+		for(var i = 0; i<req.body.awsUrlList.length; i++){
 			await axios({
 				method: 'post',
 				url: 'http://' + awsUrlList[i] + ':3000/consensus',

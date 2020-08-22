@@ -10,7 +10,7 @@ myMain = require("./myMain.js");
 myProcedure = require("./myProcedure.js");
 myDeliver = require("./myDeliver.js");
 
-transactionReceiver =0
+transactionReceiver = 0;
 
 
 
@@ -18,7 +18,8 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	//console.log(req.body);
 	//console.log(typeof(req.body.receiverAddress));
-	//console.log(req.body.receiverAddress);
+	console.log(req.body.receiverAddress[1]);
+	console.log(req.body.transaction[1]);
 	
 	//for(var i = 0; i < req.body.receiverAddress.length; i++){
 		//if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
@@ -104,7 +105,7 @@ app.post('/Vote', function(req, res) {
 				//console.log("insert", commitBlock, "to DB");
 				
 				saveblock.push(req.body.height);
-				mgdb.insertOne(commitBlock);
+				//mgdb.insertOne(commitBlock);
 				lastBlockHash = commitBlock.blockHash;
 				
 				//console.log(commitBlock.blockHash);

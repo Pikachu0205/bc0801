@@ -20,15 +20,15 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress);
 	
-	for(var i = 0; i < req.body.receiverAddress.length; i++){
-		if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
-			transaction123.push(req.body.transaction[i]);
-	}
+	//for(var i = 0; i < req.body.receiverAddress.length; i++){
+		//if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff")
+			//transaction123.push(req.body.transaction[i]);
+	//}
 	
 	lastBlockHash = req.body.parentHash;
 	height = req.body.height;
 	
-	//transaction123 = req.body.transaction;
+	transaction123 = req.body.transaction;
 	//if(req.body.height == height + 1)
 	if(transactionReceiver == 0){
 		myMain.newHeight(0);

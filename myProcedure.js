@@ -66,12 +66,15 @@ async function feedbackTransaction(){
 		isfeedback = 1;
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
-		console.log("feedbackVote : " + feedbackVote);
-		console.log("transaction123 " + transaction123);
+		//console.log("feedbackVote : " + feedbackVote);
+		//console.log("transaction123 " + transaction123);
 		
 		
 		
 		for(var i = 0; i < awsUrlList.length; i++){
+			console.log("ftra: " + ftra);
+			console.log("fvote: " + fvote);
+			
 			await axios({
 				method: 'post',
 				url: 'http://' + awsUrlList[i] + ':3000/consensus',

@@ -59,11 +59,13 @@ async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
 	
-	var ftra = transaction123;
-	var fvote = feedbackVote;
+	
 	
 	if(isfeedback != 1){
+		
 		isfeedback = 1;
+		var ftra = transaction123;
+		var fvote = feedbackVote;
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
 		//console.log("feedbackVote : " + feedbackVote);

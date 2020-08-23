@@ -89,15 +89,18 @@ async function feedbackTransaction(){
 			}).then(function(res){
 				console.log(res.data);
 				//console.log(res.config.data);
+				
+				//myMain.newHeight(0);
+			})
+			.catch(function(err){console.log(err.data);});
+		}
+		
 				myMain.toStop();
 				transaction123.length = 0;
 				receiverAddress123.length = 0;
 				transactionReceiver =0;
 				feedbackVote.length = 0;
-				//myMain.newHeight(0);
-			})
-			.catch(function(err){console.log(err.data);});
-		}
+		
 		
 	}
 	//}

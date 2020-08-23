@@ -58,7 +58,7 @@ function getTransaction(){
 async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
-		
+	if(isfeedback != 1){
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
 		
@@ -92,7 +92,7 @@ async function feedbackTransaction(){
 			.catch(function(err){console.log(err.data);});
 		}
 		
-	
+	}
 	//}
 }
 

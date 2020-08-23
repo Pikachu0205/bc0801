@@ -58,12 +58,19 @@ function getTransaction(){
 async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
+	
+	var ftra = transaction123;
+	var fvote = feedbackVote;
+	
 	if(isfeedback != 1){
 		isfeedback = 1;
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
 		console.log("feedbackVote : " + feedbackVote);
 		console.log("transaction123 " + transaction123);
+		
+		
+		
 		for(var i = 0; i < awsUrlList.length; i++){
 			await axios({
 				method: 'post',
@@ -73,9 +80,9 @@ async function feedbackTransaction(){
 				data: {
 					height : height,
 					round : round,
-					transaction : transaction123,
+					transaction : ftra,
 					blockHash : commitBlock.blockHash.split(),
-					vote : feedbackVote
+					vote : fvote
 				}
 				
 				
@@ -85,9 +92,7 @@ async function feedbackTransaction(){
 				myMain.toStop();
 				transaction123.length = 0;
 				receiverAddress123.length = 0;
-				
 				transactionReceiver =0;
-				
 				feedbackVote.length = 0;
 				//myMain.newHeight(0);
 			})

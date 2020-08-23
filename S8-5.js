@@ -1,7 +1,7 @@
 var saveblock = [], readyMem = 0;
 receiveBlock = 0, stopRecMsig = 0, broMsig = 0, witnessAbc = [];
 lastBlockHash = 0;
-feedbackVote = [];
+feedbackVote = [],isfeedback = 0;
 
 var multer = require('multer');
 var upload = multer();
@@ -22,9 +22,8 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(req.body.transaction[1]);
 	if(transactionReceiver == 0){
 		
-		
 		transactionReceiver = 1;
-		
+		isfeedback = 0;
 		
 		lastBlockHash = req.body.parentHash;
 		height = req.body.height;
@@ -131,7 +130,8 @@ app.post('/Vote', function(req, res) {
 				//console.log(thisLockset);
 				
 				if( !newHeightTogether ){
-					myProcedure.feedbackTransaction();
+					if(isfeedback != 1)
+						myProcedure.feedbackTransaction();
 					//myMain.newHeight(0);
 				}
 				

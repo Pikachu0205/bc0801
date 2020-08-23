@@ -60,7 +60,6 @@ async function feedbackTransaction(){
 	//for(i=0; i < member; i++){
 		
 		//console.log("transaction123 : " + transaction123);
-		isfeedback = 1;
 		console.log("===== feedback =====");
 		
 		for(var i = 0; i < awsUrlList.length; i++){

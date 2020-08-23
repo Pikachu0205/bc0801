@@ -131,7 +131,7 @@ app.post('/Vote', function(req, res) {
 				
 				if( !newHeightTogether ){
 					if(isfeedback != 1){
-						isfeedback = 1;
+						
 						myProcedure.feedbackTransaction();
 					}
 						

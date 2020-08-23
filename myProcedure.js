@@ -62,7 +62,8 @@ async function feedbackTransaction(){
 		isfeedback = 1;
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
-		
+		console.log("feedbackVote : " + feedbackVote);
+		console.log("transaction123 " + transaction123);
 		for(var i = 0; i < awsUrlList.length; i++){
 			await axios({
 				method: 'post',
@@ -76,8 +77,7 @@ async function feedbackTransaction(){
 					blockHash : commitBlock.blockHash.split(),
 					vote : feedbackVote
 				}
-				console.log("feedbackVote : " + data.vote.length);
-				console.log("transaction123 " + transaction123);
+				
 				
 			}).then(function(res){
 				console.log(res.data);

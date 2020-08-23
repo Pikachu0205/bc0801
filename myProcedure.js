@@ -76,7 +76,8 @@ async function feedbackTransaction(){
 					blockHash : commitBlock.blockHash.split(),
 					vote : feedbackVote
 				}
-				
+				console.log("feedbackVote : " + data.vote.length);
+				console.log("transaction123 " + transaction123);
 				
 			}).then(function(res){
 				console.log(res.data);

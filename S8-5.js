@@ -24,14 +24,17 @@ app.post('/Height',upload.array(), function(req, res) {
 		
 		
 		transactionReceiver = 1;
-		console.log("transaction123 : " + transaction123);
-		console.log("receiverAddress123 : " + receiverAddress123);
-		console.log("req.body.transaction : " + req.body.transaction);
+		
 		
 		lastBlockHash = req.body.parentHash;
 		height = req.body.height;
 		//console.log();
 		console.log("\n===== height : " + height + " =====");
+		
+		console.log("transaction123 : " + transaction123);
+		console.log("receiverAddress123 : " + receiverAddress123);
+		console.log("req.body.transaction : " + req.body.transaction);
+		console.log("req.body.receiverAddress : " + req.body.receiverAddress);
 		
 		for(var i = 0; i < req.body.receiverAddress.length; i++){
 			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){

@@ -108,7 +108,8 @@ app.post('/Vote', function(req, res) {
 		//if(req.body.height > height  &&  saveblock.indexOf(req.body.height) == -1)
 			//myDeliver.SynReqDeliver(height, round, ID, req.body.sender, req.body.height, req.body.round);
 		
-		else if(req.body.height >= height  &&  req.body.round > round){
+		//else if(req.body.height >= height  &&  req.body.round > round){
+		if(req.body.height >= height  &&  req.body.round > round){
 			//if(myMain.vdf()){
 				var istimeout = -1;		//synround為要同步到的回合
 				myMain.toStop();

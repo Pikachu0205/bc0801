@@ -73,8 +73,8 @@ app.post('/Block', function(req, res) {
 		if(receiveBlock == null && req.body.height == height  &&  req.body.round == round)
 			myMain.getBlock(req);
 		
-		else if(req.body.height > height  &&  saveblock.indexOf(req.body.height) == -1)
-			myDeliver.SynReqDeliver(height, round, ID, req.body.sender, req.body.height, req.body.round);
+		//else if(req.body.height > height  &&  saveblock.indexOf(req.body.height) == -1)
+			//myDeliver.SynReqDeliver(height, round, ID, req.body.sender, req.body.height, req.body.round);
 		
 		else if(req.body.height >= height  &&  req.body.round > round){
 			//if(myMain.vdf()){
@@ -105,8 +105,8 @@ app.post('/Vote', function(req, res) {
 		}
 		feedbackVote.push(fbv);
 		
-		if(req.body.height > height  &&  saveblock.indexOf(req.body.height) == -1)
-			myDeliver.SynReqDeliver(height, round, ID, req.body.sender, req.body.height, req.body.round);
+		//if(req.body.height > height  &&  saveblock.indexOf(req.body.height) == -1)
+			//myDeliver.SynReqDeliver(height, round, ID, req.body.sender, req.body.height, req.body.round);
 		
 		else if(req.body.height >= height  &&  req.body.round > round){
 			//if(myMain.vdf()){

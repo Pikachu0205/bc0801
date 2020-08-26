@@ -47,7 +47,7 @@ app.post('/Height',upload.array(), function(req, res) {
 			}
 		}
 		
-		//console.log("transaction123 : " + transaction123);
+		console.log("transaction123 : " + transaction123);
 		//console.log("receiverAddress123 : " + receiverAddress123);
 		
 

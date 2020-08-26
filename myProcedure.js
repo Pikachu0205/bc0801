@@ -64,6 +64,7 @@ async function feedbackTransaction(){
 	if(isfeedback != 1){
 		
 		isfeedback = 1;
+		console.log("transaction123 " + transaction123);
 		var ftra = transaction123;
 		var fvote = feedbackVote;
 		//console.log("transaction123 : " + transaction123);
@@ -75,7 +76,7 @@ async function feedbackTransaction(){
 		
 		for(var i = 0; i < awsUrlList.length; i++){
 			console.log("ftra: " + ftra);
-			console.log("fvote: " + fvote);
+			//console.log("fvote: " + fvote);
 			
 			await axios({
 				method: 'post',

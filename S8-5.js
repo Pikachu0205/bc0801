@@ -20,6 +20,11 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(typeof(req.body.receiverAddress));
 	//console.log(req.body.receiverAddress[1]);
 	//console.log(req.body.transaction[1]);
+	
+	transaction123.length = 0;
+	receiverAddress123.length = 0;
+	feedbackVote.length = 0;
+	
 	if(transactionReceiver == 0){
 		
 		transactionReceiver = 1;
@@ -42,7 +47,7 @@ app.post('/Height',upload.array(), function(req, res) {
 			}
 		}
 		
-		console.log("transaction123 : " + transaction123);
+		//console.log("transaction123 : " + transaction123);
 		//console.log("receiverAddress123 : " + receiverAddress123);
 		
 

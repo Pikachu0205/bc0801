@@ -119,7 +119,7 @@ app.post('/Vote', function(req, res) {
 			}
 		
 		
-		if( commitBlock ==null && ((mode == "t"  &&  thisLockset.length >= 4*fault+1) || (mode == "m"  &&  thisLockset.length >= 2*fault+1)) ){
+		if( commitBlock ==null && ((mode == "t"  &&  thisLockset.length == 4*fault+1) || (mode == "m"  &&  thisLockset.length == 2*fault+1)) ){
 			if(mode == "t")
 				commitBlock = myProcedure.legalVote(thisLockset, height, round, 4);
 			if(mode == "m")

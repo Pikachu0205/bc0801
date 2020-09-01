@@ -25,7 +25,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		
 		transactionReceiver = 1;
 		
-		if(height != req.body.height;){
+		if(height != req.body.height){
 			
 			height = req.body.height;
 			lastBlockHash = req.body.parentHash;

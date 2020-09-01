@@ -23,40 +23,46 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	if(transactionReceiver == 0 || height < req.body.height){
 		
-		transaction123.length = 0;
-		receiverAddress123.length = 0;
-		feedbackVote.length = 0;
-	
 		transactionReceiver = 1;
-		isfeedback = 0;
 		
-		lastBlockHash = req.body.parentHash;
-		height = req.body.height;
-		//console.log();
-		console.log("\n===== height : " + height + " =====");
+		if(height != req.body.height;){
+			
+			height = req.body.height;
+			lastBlockHash = req.body.parentHash;
+			
+			transaction123.length = 0;
+			receiverAddress123.length = 0;
+			feedbackVote.length = 0;
 		
-		//console.log("transaction123 : " + transaction123);
-		//console.log("receiverAddress123 : " + receiverAddress123);
-		//console.log("req.body.transaction : " + req.body.transaction);
-		//console.log("req.body.receiverAddress : " + req.body.receiverAddress);
-		
-		for(var i = 0; i < req.body.receiverAddress.length; i++){
-			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
-				transaction123.push(String(req.body.transaction[i]));
-				receiverAddress123.push(req.body.receiverAddress[i]);
+			
+			isfeedback = 0;
+			
+			//console.log();
+			console.log("\n===== height : " + height + " =====");
+			
+			//console.log("transaction123 : " + transaction123);
+			//console.log("receiverAddress123 : " + receiverAddress123);
+			//console.log("req.body.transaction : " + req.body.transaction);
+			//console.log("req.body.receiverAddress : " + req.body.receiverAddress);
+			
+			for(var i = 0; i < req.body.receiverAddress.length; i++){
+				if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
+					transaction123.push(String(req.body.transaction[i]));
+					receiverAddress123.push(req.body.receiverAddress[i]);
+				}
 			}
-		}
-		
-		//console.log("transaction123 : " + transaction123);
-		//console.log("receiverAddress123 : " + receiverAddress123);
-		
+			
+			//console.log("transaction123 : " + transaction123);
+			//console.log("receiverAddress123 : " + receiverAddress123);
+			
 
-		
-		//transaction123 = req.body.transaction;
-		//if(req.body.height == height + 1)
-		//if(transactionReceiver == 0){
-		myMain.newHeight(0);
-		//transactionReceiver = 1;
+			
+			//transaction123 = req.body.transaction;
+			//if(req.body.height == height + 1)
+			//if(transactionReceiver == 0){
+			myMain.newHeight(0);
+			//transactionReceiver = 1;
+		}
 	}
 	//height = req.body.blockHeight;
 	

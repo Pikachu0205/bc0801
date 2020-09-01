@@ -70,7 +70,7 @@ async function feedbackTransaction(){
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
 		//console.log("feedbackVote : " + feedbackVote);
-		console.log("feedbackTransaction123 " + transaction123);
+		//console.log("feedbackTransaction123 " + transaction123);
 		
 		
 		

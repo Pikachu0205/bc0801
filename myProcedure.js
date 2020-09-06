@@ -72,6 +72,12 @@ async function feedbackTransaction(){
 		//console.log("feedbackVote : " + feedbackVote);
 		//console.log("feedbackTransaction123 " + transaction123);
 		
+		endTime = new Date().getTime();
+		heightTime = endTime - nowTime;
+	
+		var write = height + "," + heightTime + "\n";
+		fs.appendFile('height.txt', write, function (err) {	if(err)	console.log(err);	})
+		
 		
 		
 		for(var i = 0; i < awsUrlList.length; i++){

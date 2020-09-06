@@ -11,10 +11,16 @@ myProcedure = require("./myProcedure.js");
 myDeliver = require("./myDeliver.js");
 
 transactionReceiver = 0;
-
+isStartCountTransaction = 0;
+numOfTransaction = 0;
 
 
 app.post('/Height',upload.array(), function(req, res) {
+	
+	if(isStartCountTransaction == 0)
+		setTimeout(function(){
+			fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
+		},60000);
 	
 	//console.log(req.body);
 	//console.log(typeof(req.body.receiverAddress));
@@ -24,16 +30,15 @@ app.post('/Height',upload.array(), function(req, res) {
 	if(transactionReceiver == 0 || height < req.body.height){
 		
 		transactionReceiver = 1;
+		height = req.body.height;
+		lastBlockHash = req.body.parentHash;
 		
 		transaction123.length = 0;
 		receiverAddress123.length = 0;
 		feedbackVote.length = 0;
-	
 		
 		isfeedback = 0;
 		
-		lastBlockHash = req.body.parentHash;
-		height = req.body.height;
 		//console.log();
 		console.log("\n===== height : " + height + " =====");
 		
@@ -46,6 +51,7 @@ app.post('/Height',upload.array(), function(req, res) {
 			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
 				transaction123.push(String(req.body.transaction[i]));
 				receiverAddress123.push(req.body.receiverAddress[i]);
+				numOfTransaction++;
 			}
 		}
 		

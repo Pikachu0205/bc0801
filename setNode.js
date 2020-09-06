@@ -47,6 +47,8 @@ function node(){
 	if(mode == "t")		fault = (member-1)/5;
 	if(mode == "m")	fault = (member-1)/3;
 	
+	fs.writeFile('height.txt', "", function (err) {	if(err)	console.log(err);	})
+	
 	fs.readFile('privateKey.txt', function(err, data) {
 		if (err) return console.log(err);
 		readfile = data.toString().split('\n');

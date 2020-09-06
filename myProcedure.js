@@ -69,7 +69,7 @@ async function feedbackTransaction(){
 		var fvote = feedbackVote;
 		//console.log("transaction123 : " + transaction123);
 		console.log("===== feedback =====");
-		//console.log("feedbackVote : " + feedbackVote);
+		console.log("feedbackVote : " + feedbackVote);
 		//console.log("feedbackTransaction123 " + transaction123);
 		
 		endTime = new Date().getTime();

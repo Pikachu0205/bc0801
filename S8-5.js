@@ -13,7 +13,7 @@ myDeliver = require("./myDeliver.js");
 transactionReceiver = 0;
 isStartCountTransaction = 0;
 numOfTransaction = 0;
-
+heighted = [];
 
 app.post('/Height',upload.array(), function(req, res) {
 	
@@ -27,7 +27,9 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(req.body.receiverAddress[1]);
 	//console.log(req.body.transaction[1]);
 	
-	if(transactionReceiver == 0 || height < req.body.height){
+	//if(transactionReceiver == 0 || height < req.body.height){
+	if( !heighted.includes(req.body.height) ){
+		heighted.push(req.body.height);
 		
 		transactionReceiver = 1;
 		height = req.body.height;

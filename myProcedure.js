@@ -58,7 +58,7 @@ function getTransaction(){
 async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
-	myMain.toStop();
+	
 	
 	
 	if(isfeedback != 1){

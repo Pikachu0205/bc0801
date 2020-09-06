@@ -58,7 +58,7 @@ function getTransaction(){
 async function feedbackTransaction(){
 	//console.log(feedbackVote);
 	//for(i=0; i < member; i++){
-	
+	myMain.toStop();
 	
 	
 	if(isfeedback != 1){
@@ -101,7 +101,7 @@ async function feedbackTransaction(){
 			}).then(function(res){
 				console.log(res.data);
 				//console.log(res.config.data);
-				myMain.toStop();
+				//myMain.toStop();
 				
 				transactionReceiver =0;
 				//myMain.newHeight(0);

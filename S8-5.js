@@ -29,6 +29,7 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	console.log("req.body.height : " + req.body.height);
 	console.log("height : " + height);
+	console.log("transactionReceiver" + transactionReceiver);
 	if(transactionReceiver == 0 && height < req.body.height){
 	//if( !heighted.includes(req.body.height) ){
 		console.log("\n" + heighted);

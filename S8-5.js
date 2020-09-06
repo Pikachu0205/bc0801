@@ -27,8 +27,8 @@ app.post('/Height',upload.array(), function(req, res) {
 	//console.log(req.body.receiverAddress[1]);
 	//console.log(req.body.transaction[1]);
 	
-	//if(transactionReceiver == 0 || height < req.body.height){
-	if( !heighted.indexOf(req.body.height) ){
+	if(transactionReceiver == 0 || height < req.body.height){
+	//if( !heighted.includes(req.body.height) ){
 		console.log("\n" + heighted);
 		heighted.push(req.body.height);
 		

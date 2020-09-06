@@ -29,7 +29,7 @@ app.post('/Height',upload.array(), function(req, res) {
 	
 	//if(transactionReceiver == 0 || height < req.body.height){
 	if( !heighted.includes(req.body.height) ){
-		console.log(heighted);
+		console.log("\n" + heighted);
 		heighted.push(req.body.height);
 		
 		transactionReceiver = 1;
@@ -43,7 +43,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		isfeedback = 0;
 		
 		//console.log();
-		console.log("\n===== height : " + height + " =====");
+		console.log("===== height : " + height + " =====");
 		console.log(heighted);
 		
 		//console.log("transaction123 : " + transaction123);

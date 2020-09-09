@@ -22,16 +22,14 @@ app.post('/Height',upload.array(), function(req, res) {
 			fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
 		},60000);
 	
-	//console.log(req.body);
-	//console.log(typeof(req.body.receiverAddress));
-	//console.log(req.body.receiverAddress[1]);
-	//console.log(req.body.transaction[1]);
 	
 	console.log("req.body.height : " + req.body.height);
 	console.log("height : " + height);
-	console.log("transactionReceiver" + transactionReceiver);
-	if(transactionReceiver == 0 && height < req.body.height){
-	//if( !heighted.includes(req.body.height) ){
+	console.log("Lock" + transactionReceiver);
+	
+	
+	//if(transactionReceiver == 0 && height < req.body.height){
+	if( !heighted.includes(req.body.height) ){
 		console.log("\n" + heighted);
 		heighted.push(req.body.height);
 		
@@ -49,10 +47,6 @@ app.post('/Height',upload.array(), function(req, res) {
 		console.log("===== height : " + height + " =====");
 		console.log(heighted);
 		
-		//console.log("transaction123 : " + transaction123);
-		//console.log("receiverAddress123 : " + receiverAddress123);
-		//console.log("req.body.transaction : " + req.body.transaction);
-		//console.log("req.body.receiverAddress : " + req.body.receiverAddress);
 		
 		for(var i = 0; i < req.body.receiverAddress.length; i++){
 			if(req.body.receiverAddress[i] == "0x00000000000000000000000000000000000000ff"){
@@ -62,10 +56,7 @@ app.post('/Height',upload.array(), function(req, res) {
 			}
 		}
 		
-		//console.log("transaction123 : " + transaction123);
-		//console.log("receiverAddress123 : " + receiverAddress123);
 		
-
 		
 		//transaction123 = req.body.transaction;
 		//if(req.body.height == height + 1)
@@ -73,9 +64,6 @@ app.post('/Height',upload.array(), function(req, res) {
 		myMain.newHeight(0);
 		//transactionReceiver = 1;
 	}
-	//height = req.body.blockHeight;
-	
-	//console.log(transaction123);
 	
 	res.send(" abc ");
 });

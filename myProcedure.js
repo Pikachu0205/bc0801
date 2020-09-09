@@ -117,13 +117,16 @@ async function feedbackTransaction(){
 function legalVote(lockset, height, round, c){	//找出大於cf+1張合法票的人
 	var memls = [], block = [], obj={};
 	
+	//先萃取出合時的票
 	for(var i in lockset)	//論文寫說4f+1投給同一個值.目前沒寫判斷是否同一個
 		if(memls[lockset[i].sender] == null  &&  lockset[i].vote != null
 				&&  lockset[i].height == height  &&  lockset[i].round == round){
-			block.push(lockset[i].vote);
+			block.push(lockset[i].vote);	//commit合法的票到block
 			memls[lockset[i].sender] = 1;	//每人一票
 		}
-		
+	
+	
+	
 	for(var i in block){  
 		var key = block[i].block; 
 		

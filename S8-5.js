@@ -56,7 +56,7 @@ app.post('/Height',upload.array(), function(req, res) {
 			}
 		}
 		
-		
+		console.log("transaction123 : " + transaction123);
 		
 		//transaction123 = req.body.transaction;
 		//if(req.body.height == height + 1)

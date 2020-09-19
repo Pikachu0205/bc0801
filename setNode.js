@@ -53,8 +53,8 @@ function node(){
 		if (err) return console.log(err);
 		readfile = data.toString().split('\n');
 		
-		var port = 1000 + ID * 1000;
-		//var port = 1050;
+		//var port = 1000 + ID * 1000;
+		var port = 1050;
 		app.listen(port);
 		
 		privateKey = ec.keyFromPrivate(readfile[ID]);

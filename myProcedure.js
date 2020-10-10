@@ -81,7 +81,7 @@ async function feedbackTransaction(){
 		
 		
 		for(var i = 0; i < awsUrlList.length; i++){
-			console.log("ftra: " + ftra);
+			//console.log("ftra: " + ftra);
 			//console.log("fvote: " + fvote);
 			
 			await axios({

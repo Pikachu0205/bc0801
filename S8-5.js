@@ -21,7 +21,7 @@ app.post('/Height',upload.array(), function(req, res) {
 		setTimeout(function(){
 			fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
 		},60000);
-	
+	isStartCountTransaction = 1;
 	
 	console.log("req.body.height : " + req.body.height);
 	console.log("height : " + height);

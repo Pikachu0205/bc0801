@@ -20,6 +20,7 @@ app.post('/Height',upload.array(), function(req, res) {
 	for(var a = 1; ; a++)
 		if(isStartCountTransaction == 0)
 			setTimeout(function(){
+				console.log("Number Of Transactions : " + numOfTransaction);
 				fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
 			},60000*a);
 	

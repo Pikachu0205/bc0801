@@ -17,10 +17,12 @@ heighted = [];
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	if(isStartCountTransaction == 0)
-		setTimeout(function(){
-			fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
-		},60000);
+	for(var a = 1; ; a++)
+		if(isStartCountTransaction == 0)
+			setTimeout(function(){
+				fs.writeFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
+			},60000*a);
+	
 	isStartCountTransaction = 1;
 	
 	console.log("req.body.height : " + req.body.height);

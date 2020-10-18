@@ -17,21 +17,14 @@ heighted = [];
 
 app.post('/Height',upload.array(), function(req, res) {
 	
-	for(var a = 1 ; a < 6 ; a++)
+	for(var a = 1 ; a < 4 ; a++)
 		if(isStartCountTransaction == 0)
 			setTimeout(function(){
 				console.log("Number Of Transactions : " + numOfTransaction);
-				if(a == 1){
-					firstMin = numOfTransaction;
-					fs.appendFile('Transaction.txt', firstMin, function (err) {	if(err)	console.log(err);	})
-				}
-				if(a == 5){
-					fifthMin = numOfTransaction;
-					fs.appendFile('Transaction.txt', fifthMin, function (err) {	if(err)	console.log(err);	})
-					fs.appendFile('Transaction.txt', fifthMin - firstMin, function (err) {	if(err)	console.log(err);	})
-				}
 				
-				
+				//firstMin = numOfTransaction;
+				fs.appendFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
+						
 			},60000*a);
 	
 	isStartCountTransaction = 1;

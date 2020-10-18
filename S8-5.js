@@ -23,7 +23,7 @@ app.post('/Height',upload.array(), function(req, res) {
 				console.log("Number Of Transactions : " + numOfTransaction);
 				
 				//firstMin = numOfTransaction;
-				fs.appendFile('Transaction.txt', numOfTransaction, function (err) {	if(err)	console.log(err);	})
+				fs.appendFile('Transaction.txt', "\n" + numOfTransaction, function (err) {	if(err)	console.log(err);	})
 						
 			},60000*a);
 	

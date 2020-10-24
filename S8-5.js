@@ -15,6 +15,8 @@ isStartCountTransaction = 0;
 numOfTransaction = 0;
 heighted = [];
 
+b = 0;
+
 app.post('/Height',upload.array(), function(req, res) {
 	
 	for(var a = 1 ; a < 61 ; a++)
@@ -23,7 +25,7 @@ app.post('/Height',upload.array(), function(req, res) {
 				console.log("Number Of Transactions : " + numOfTransaction);
 				
 				//firstMin = numOfTransaction;
-				fs.appendFile('Transaction.txt', "(第" + a + "分)\n" + numOfTransaction, function (err) {	if(err)	console.log(err);	})
+				fs.appendFile('Transaction.txt', "(第" + b++ + "分)\n" + numOfTransaction, function (err) {	if(err)	console.log(err);	})
 						
 			},60000*a);
 	
